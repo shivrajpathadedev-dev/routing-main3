@@ -55,7 +55,7 @@ export class ProductComponent implements OnInit {
           this._productService.removeProduct(this.productId)
             .subscribe({
               next: data => {
-
+                this._snackbar.openSuccesssnackbar(data.msg)
                 this._productService.fetchProduct()
                 
                   .subscribe(products => {
