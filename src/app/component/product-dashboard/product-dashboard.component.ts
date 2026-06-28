@@ -23,10 +23,10 @@ productArr:Array<Iproduct>=[]
 
         if (
           this.productArr.length > 0 &&
-          this._router.url === '/product'
+          this._router.url === '/products'
         ) {
           this._router.navigate([
-            '/product',
+            '/products',
             this.productArr[0].pid
           ]);
         }
