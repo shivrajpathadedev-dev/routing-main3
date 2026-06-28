@@ -16,14 +16,24 @@ productArr:Array<Iproduct>=[]
   ) { }
 
   ngOnInit(): void {
-    this._productservice.fetchProduct()
+  this._productservice.fetchProduct()
     .subscribe({
-      next:data=>{
-        this.productArr=data
-        this._router.navigate(['/products',this.productArr[0].pid])
-      },error:err=>{
+      next: data => {
+        this.productArr = data;
+
+        if (
+          this.productArr.length > 0 &&
+          this._router.url === '/product'
+        ) {
+          this._router.navigate([
+            '/product',
+            this.productArr[0].pid
+          ]);
+        }
+      },
+      error: err => {
         console.log(err);
       }
-    })
-  }
+    });
+}
 }

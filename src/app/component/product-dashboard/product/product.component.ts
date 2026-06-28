@@ -64,7 +64,6 @@ export class ProductComponent implements OnInit {
                     } else {
                       this._router.navigate(['/products']);
                     }
-
                   });
               },
               error: err => {
