@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-8" *ngIf="productId">
+    <mat-card class="product-card">
+      <mat-card-content>
+        <p>
+          The Product is {{productObj.pname}} And It's Status is
+          <strong>{{productObj.pstatus}}</strong>
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="d-flex justify-content-between">
+        <button 
+        routerLinkActive="active"
+        [routerLink]="['/products',productObj.pid,'edit']" mat-raised-button color="primary">
+          Edit
+        </button>
+        <button
+        routerLinkActive="active"
+         (click)="onRemove()" mat-raised-button color="warn">
+          Remove
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

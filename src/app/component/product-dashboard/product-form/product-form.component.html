@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h2><strong>{{isInEditMode? "Update Product" :"Add Product"}}</strong></h2>
+                <form [formGroup]="productform" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="pname">P Name</label>
+                        <input formControlName="pname" id="pname" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="pstatus">P Status</label>
+                        <select type="text" class="form-control" formControlName="pstatus" id="pstatus">
+                            <option value="In-Progress">In-Progress</option>
+                            <option value="Dispatched">Dispatched</option>
+                            <option value="Delivered">Delivered</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="canReturn">Can Return</label>
+                        <select formControlName="canReturn" id="canReturn" class="form-control" type="text">
+                            <option [ngValue]="1">Yes</option>
+                            <option [ngValue]="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pimg">Image URL</label>
+                        <input formControlName="pimg" id="pimg" type="text" class="form-control"
+                            placeholder="Enter Image URL">
+                    </div>
+                    <div>
+                        <button *ngIf="!isInEditMode" type="submit" mat-raised-button color="primary">Add
+                            Product</button>
+                        <button (click)="onUpdateProduct()" *ngIf="isInEditMode" type="button" mat-raised-button
+                            color="primary">Update Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
