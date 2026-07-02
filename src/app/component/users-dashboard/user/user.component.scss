@@ -1,0 +1,32 @@
+
+
+.user-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.font-weight-bold{
+  text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.user-img{
+      width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+.text-center{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+

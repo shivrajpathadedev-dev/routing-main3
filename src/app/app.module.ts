@@ -6,13 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HomeComponent } from './component/home/home.component';
-import { FairsComponent } from './component/fairs/fairs.component';
 import { ProductDashboardComponent } from './component/product-dashboard/product-dashboard.component';
-import { UsersComponent } from './component/users/users.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { PathNotFoundComponent } from './component/path-not-found/path-not-found.component';
 import { ProductFormComponent } from './component/product-dashboard/product-form/product-form.component';
@@ -20,6 +19,12 @@ import { ProductComponent } from './component/product-dashboard/product/product.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GetConfirmComponent } from './component/get-confirm/get-confirm.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { UsersDashboardComponent } from './component/users-dashboard/users-dashboard.component';
+import { UserComponent } from './component/users-dashboard/user/user.component';
+import { UserFormComponent } from './component/users-dashboard/user-form/user-form.component';
+import { FairsDashboardComponent } from './component/fairs-dashboard/fairs-dashboard.component';
+import { FairsCardComponent } from './component/fairs-dashboard/fairs-card/fairs-card.component';
+import { FairsDetailsComponent } from './component/fairs-dashboard/fairs-details/fairs-details.component';
 
 
 @NgModule({
@@ -27,13 +32,17 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FairsComponent,
     ProductDashboardComponent,
-    UsersComponent,
     PathNotFoundComponent,
     ProductFormComponent,
     ProductComponent,
-    GetConfirmComponent
+    GetConfirmComponent,
+    UsersDashboardComponent,
+    UserComponent,
+    UserFormComponent,
+    FairsDashboardComponent,
+    FairsCardComponent,
+    FairsDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +55,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatToolbarModule,
      FormsModule,
     ReactiveFormsModule,
-MatDialogModule
+MatDialogModule,
+MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
